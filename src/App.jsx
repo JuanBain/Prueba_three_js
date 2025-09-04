@@ -79,6 +79,8 @@ export default function App() {
             defaults={data?.defaults}
             opacity={layers.walls.opacity}
             color={data?.defaults?.colors?.walls}
+            windows={data?.layers?.windows}
+            doors={data?.layers?.doors}
           />
 
           <BeamsGroup

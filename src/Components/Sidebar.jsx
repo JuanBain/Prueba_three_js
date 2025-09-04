@@ -13,7 +13,7 @@ export default function Sidebar({
     return (
         <div className="sidebar" style={{ width: 280, padding: 12, borderRight: '1px solid #ddd', overflow: 'auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <h3 style={{ margin: 0 }}>House 3D</h3>
+                <h3 style={{ margin: 0 }}> 3D House</h3>
                 <button onClick={() => setShowStats((s) => !s)}>
                     {showStats ? 'Hide Stats' : 'Show Stats'}
                 </button>

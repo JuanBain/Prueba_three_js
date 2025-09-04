@@ -1,5 +1,6 @@
-
-import SimpleWallUtils from '../Utils/WallUtils'
+import React from 'react'
+import * as THREE from 'three'
+import Doors from './Doors'
 
 export default function Walls({ start, end, height, thickness, color, opacity }) {
   if (opacity === 0) return null
