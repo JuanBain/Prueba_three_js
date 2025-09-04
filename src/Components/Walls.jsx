@@ -2,7 +2,8 @@ import React from 'react'
 import * as THREE from 'three'
 import Doors from './Doors'
 
-export default function Walls({ start, end, height, thickness, doors }) {
+export default function Walls({ start, end, height, thickness, doors, color, opacity }) {
+  if (opacity === 0) return null
   const startWall = new THREE.Vector3(...start)
   const endWall = new THREE.Vector3(...end)
   const directionWall = endWall.clone().sub(startWall)
@@ -28,7 +29,7 @@ export default function Walls({ start, end, height, thickness, doors }) {
               rotation={[0, yaw, 0]}
             >
               <boxGeometry args={[seg1Length, height, thickness]} />
-              <meshStandardMaterial color="#9CA3AF" />
+              <meshStandardMaterial color={color} opacity={opacity ?? 1.0} transparent={opacity < 1.0} />
             </mesh>
           )}
           {seg2Length > 0 && (
@@ -41,7 +42,7 @@ export default function Walls({ start, end, height, thickness, doors }) {
               rotation={[0, yaw, 0]}
             >
               <boxGeometry args={[seg2Length, height, thickness]} />
-              <meshStandardMaterial color="#9CA3AF" />
+              <meshStandardMaterial color={color} opacity={opacity ?? 1.0} transparent={opacity < 1.0} />
             </mesh>
           )}
         </>
@@ -52,9 +53,9 @@ export default function Walls({ start, end, height, thickness, doors }) {
   const center = startWall.clone().add(endWall).multiplyScalar(0.5)
   center.y = height / 2
   return (
-    <mesh position={center} rotation={[0, yaw, 0]}>
+    < mesh position={center} rotation={[0, yaw, 0]} >
       <boxGeometry args={[length, height, thickness]} />
-      <meshStandardMaterial color="#9CA3AF" />
-    </mesh>
+      <meshStandardMaterial color={color} opacity={parseFloat(opacity)} transparent={true} />
+    </mesh >
   )
 }

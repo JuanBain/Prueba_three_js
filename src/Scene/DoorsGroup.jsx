@@ -1,7 +1,7 @@
 import React from 'react'
 import Doors from '../Components/Doors'
 
-export default function DoorsGroup({ showDoors, doors, defaults }) {
+export default function DoorsGroup({ showDoors, doors, defaults, opacity, color }) {
     if (!showDoors || !doors) return null
     return (
         <>
@@ -11,6 +11,8 @@ export default function DoorsGroup({ showDoors, doors, defaults }) {
                     {...d}
                     height={d.height ?? defaults?.doorHeight ?? 2.1}
                     thickness={d.thickness ?? defaults?.doorThickness ?? 0.1}
+                    opacity={opacity}
+                    color={color}
                 />
             ))}
         </>

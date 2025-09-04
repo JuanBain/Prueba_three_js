@@ -1,17 +1,15 @@
 import * as THREE from 'three'
 
-export default function Windows({ center, size, material }) {
-    const glassColor = material?.glassColor ?? '#93C5FD'
-    const opacity = material?.opacity ?? 0.45
+export default function Windows({ center, size, material, opacity, color }) {
+    if (opacity === 0) return null
     return (
         <mesh position={new THREE.Vector3(...center)}>
             <boxGeometry args={size} />
             <meshPhysicalMaterial
-                color={glassColor}
-                transmission={1}
+                color={color}
                 roughness={0.1}
-                transparent
-                opacity={opacity}
+                transparent={true}
+                opacity={parseFloat(opacity)}
             />
         </mesh>
     )

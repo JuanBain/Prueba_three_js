@@ -1,16 +1,14 @@
 import React from 'react'
 import * as THREE from 'three'
 
-export default function Walls({ start, end, profile, material }) {
+export default function Beams({ start, end, profile, material, color, opacity }) {
+  if (opacity === 0) return null
   const s = new THREE.Vector3(...start)
   const e = new THREE.Vector3(...end)
   const dir = e.clone().sub(s)
   const length = dir.length()
   const center = s.clone().add(e).multiplyScalar(0.5)
 
-  const color = material?.color ?? '#4B5563'
-  const opacity = material?.opacity ?? 1.0
-  const transparent = opacity < 1.0
 
   if (profile?.type === 'cyl') {
     const radius = profile.radius ?? 0.06
@@ -22,7 +20,7 @@ export default function Walls({ start, end, profile, material }) {
     return (
       <mesh position={center} quaternion={quat}>
         <cylinderGeometry args={[radius, radius, length, 16]} />
-        <meshStandardMaterial color={color} opacity={opacity} transparent={transparent} />
+        <meshStandardMaterial color={color} opacity={parseFloat(opacity)} transparent={true} />
       </mesh>
     )
   }
@@ -36,7 +34,7 @@ export default function Walls({ start, end, profile, material }) {
   return (
     <mesh position={center} quaternion={quat}>
       <boxGeometry args={[length, sy, sz]} />
-      <meshStandardMaterial color={color} opacity={opacity} transparent={transparent} />
+      <meshStandardMaterial color={color} opacity={parseFloat(opacity)} transparent={true} />
     </mesh>
   )
 }

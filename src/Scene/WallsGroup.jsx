@@ -1,7 +1,7 @@
 import React from 'react'
 import Walls from '../Components/Walls'
 
-export default function WallsGroup({ showWalls, walls, defaults }) {
+export default function WallsGroup({ showWalls, walls, defaults, color, opacity }) {
     if (!showWalls || !walls) return null
     return (
         <>
@@ -11,6 +11,8 @@ export default function WallsGroup({ showWalls, walls, defaults }) {
                     {...w}
                     height={w.height ?? defaults?.wallHeight ?? 3}
                     thickness={w.thickness ?? defaults?.wallThickness ?? 0.2}
+                    opacity={opacity ?? 1.0}
+                    color={color}
                 />
             ))}
         </>

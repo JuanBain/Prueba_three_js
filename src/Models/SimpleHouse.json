@@ -13,7 +13,16 @@
     "wallHeight": 3.0,
     "wallThickness": 0.2,
     "pipeRadius": 0.05,
-    "cableRadius": 0.02
+    "cableRadius": 0.02,
+    "colors": {
+      "walls": "#9CA3AF",
+      "roof": "#6f6b80",
+      "doors": "#8B5E3C",
+      "windows": "#93C5FD",
+      "beams": "#4B5563",
+      "plumbing": "#60A5FA",
+      "electrical": "#F59E0B"
+    }
   },
   "layers": {
     "walls": [
@@ -29,10 +38,7 @@
           0
         ],
         "height": 3.0,
-        "thickness": 0.1,
-        "material": {
-          "color": "#9CA3AF"
-        }
+        "thickness": 0.1
       },
       {
         "start": [
@@ -46,10 +52,7 @@
           5
         ],
         "height": 3.0,
-        "thickness": 0.1,
-        "material": {
-          "color": "#9CA3AF"
-        }
+        "thickness": 0.1
       },
       {
         "start": [
@@ -63,10 +66,7 @@
           5
         ],
         "height": 3.0,
-        "thickness": 0.1,
-        "material": {
-          "color": "#9CA3AF"
-        }
+        "thickness": 0.1
       },
       {
         "start": [
@@ -80,10 +80,7 @@
           0
         ],
         "height": 3.0,
-        "thickness": 0.1,
-        "material": {
-          "color": "#9CA3AF"
-        }
+        "thickness": 0.1
       }
     ],
     "windows": [
@@ -97,11 +94,7 @@
           1,
           1.0,
           0.11
-        ],
-        "material": {
-          "glassColor": "#93C5FD",
-          "opacity": 0.45
-        }
+        ]
       },
       {
         "center": [
@@ -113,11 +106,7 @@
           1.2,
           1.0,
           0.11
-        ],
-        "material": {
-          "glassColor": "#93C5FD",
-          "opacity": 0.45
-        }
+        ]
       }
     ],
     "doors": [
@@ -131,11 +120,7 @@
           0.9,
           2.1,
           0.11
-        ],
-        "material": {
-          "color": "#8B5E3C",
-          "opacity": 1.0
-        }
+        ]
       }
     ],
     "roof": {
@@ -149,11 +134,7 @@
         5.2,
         0.2,
         5.2
-      ],
-      "material": {
-        "color": "#6B7280",
-        "opacity": 0.98
-      }
+      ]
     },
     "beams": [
       {
@@ -174,10 +155,6 @@
             0.1,
             0.1
           ]
-        },
-        "material": {
-          "color": "#4B5563",
-          "opacity": 1.0
         }
       },
       {
@@ -198,10 +175,6 @@
             0.1,
             0.1
           ]
-        },
-        "material": {
-          "color": "#4B5563",
-          "opacity": 1.0
         }
       },
       {
@@ -222,10 +195,6 @@
             0.1,
             0.1
           ]
-        },
-        "material": {
-          "color": "#4B5563",
-          "opacity": 1.0
         }
       },
       {
@@ -246,10 +215,6 @@
             0.1,
             0.1
           ]
-        },
-        "material": {
-          "color": "#4B5563",
-          "opacity": 1.0
         }
       }
     ],
@@ -277,11 +242,7 @@
             4.9
           ]
         ],
-        "radius": 0.05,
-        "material": {
-          "color": "#60A5FA",
-          "opacity": 0.9
-        }
+        "radius": 0.05
       }
     ],
     "electrical": [
@@ -308,11 +269,7 @@
             4.9
           ]
         ],
-        "radius": 0.02,
-        "material": {
-          "color": "#F59E0B",
-          "opacity": 0.9
-        }
+        "radius": 0.02
       },
       {
         "points": [
@@ -332,11 +289,7 @@
             3
           ]
         ],
-        "radius": 0.02,
-        "material": {
-          "color": "#F59E0B",
-          "opacity": 0.9
-        }
+        "radius": 0.02
       }
     ]
   }
