@@ -2,7 +2,6 @@ import * as THREE from 'three'
 
 export default function Roof({ type, position, size, vertices, material, color, opacity }) {
     if (opacity === 0) return null
-    // type: "flat" | "gable" | "custom"
 
     if (type === 'flat') {
         return (
