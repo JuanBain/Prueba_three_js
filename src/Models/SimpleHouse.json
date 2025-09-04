@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "meta": {
     "name": "Simple House",
-    "description": "prueba tecnica",
+    "description": "Technical test",
     "origin": [
       0,
       0,
@@ -29,7 +29,7 @@
           0
         ],
         "height": 3.0,
-        "thickness": 0.2,
+        "thickness": 0.1,
         "material": {
           "color": "#9CA3AF"
         }
@@ -46,7 +46,7 @@
           5
         ],
         "height": 3.0,
-        "thickness": 0.2,
+        "thickness": 0.1,
         "material": {
           "color": "#9CA3AF"
         }
@@ -63,7 +63,7 @@
           5
         ],
         "height": 3.0,
-        "thickness": 0.2,
+        "thickness": 0.1,
         "material": {
           "color": "#9CA3AF"
         }
@@ -80,7 +80,7 @@
           0
         ],
         "height": 3.0,
-        "thickness": 0.2,
+        "thickness": 0.1,
         "material": {
           "color": "#9CA3AF"
         }
@@ -89,14 +89,14 @@
     "windows": [
       {
         "center": [
-          2.5,
-          1.2,
-          0.11
+          3,
+          2,
+          0
         ],
         "size": [
-          1.2,
+          1,
           1.0,
-          0.06
+          0.11
         ],
         "material": {
           "glassColor": "#93C5FD",
@@ -105,14 +105,14 @@
       },
       {
         "center": [
-          2.5,
-          1.2,
-          4.89
+          1,
+          2,
+          5
         ],
         "size": [
           1.2,
           1.0,
-          0.06
+          0.11
         ],
         "material": {
           "glassColor": "#93C5FD",
@@ -124,13 +124,13 @@
       {
         "center": [
           0.9,
-          1.05,
-          0.11
+          1.1,
+          0
         ],
         "size": [
           0.9,
           2.1,
-          0.06
+          0.11
         ],
         "material": {
           "color": "#8B5E3C",
@@ -158,14 +158,14 @@
     "beams": [
       {
         "start": [
-          0.5,
-          2.8,
-          0.5
+          0,
+          0.0,
+          0
         ],
         "end": [
-          4.5,
-          2.8,
-          0.5
+          0,
+          3.0,
+          0
         ],
         "profile": {
           "type": "box",
@@ -182,14 +182,14 @@
       },
       {
         "start": [
-          0.5,
-          2.8,
-          4.5
+          5,
+          0.0,
+          0
         ],
         "end": [
-          4.5,
-          2.8,
-          4.5
+          5,
+          3.0,
+          0
         ],
         "profile": {
           "type": "box",
@@ -206,18 +206,22 @@
       },
       {
         "start": [
-          0.5,
-          2.8,
-          0.5
+          0,
+          0.0,
+          5
         ],
         "end": [
-          0.5,
-          2.8,
-          4.5
+          0,
+          3.0,
+          5
         ],
         "profile": {
-          "type": "cyl",
-          "radius": 0.06
+          "type": "box",
+          "size": [
+            0.1,
+            0.1,
+            0.1
+          ]
         },
         "material": {
           "color": "#4B5563",
@@ -226,18 +230,22 @@
       },
       {
         "start": [
-          4.5,
-          2.8,
-          0.5
+          5,
+          0.0,
+          5
         ],
         "end": [
-          4.5,
-          2.8,
-          4.5
+          5,
+          3.0,
+          5
         ],
         "profile": {
-          "type": "cyl",
-          "radius": 0.06
+          "type": "box",
+          "size": [
+            0.1,
+            0.1,
+            0.1
+          ]
         },
         "material": {
           "color": "#4B5563",
