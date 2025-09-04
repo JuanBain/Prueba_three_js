@@ -6,6 +6,9 @@ import BeamsGroup from './Scene/BeamsGroup'
 import DoorsGroup from './Scene/DoorsGroup'
 import WindowsGroup from './Scene/WindowsGroup'
 import SimpleHouse from './Models/SimpleHouse.json'
+import PlumbingsGroup from './Scene/PlumbingsGroup'
+import ElectricalRunsGroup from './Scene/ElectricalRunsGroup'
+import RoofsGroup from './Scene/RoofsGroup'
 
 export default function App() {
   const [data, setData] = useState(SimpleHouse)
@@ -15,7 +18,9 @@ export default function App() {
   const [showDoors, setShowDoors] = useState(true)
   const [showStats, setShowStats] = useState(false)
   const [showWindows, setShowWindows] = useState(true)
-
+  const [showPlumbings, setShowPlumbings] = useState(true)
+  const [showElectrical, setShowElectrical] = useState(true)
+  const [showRoof, setShowRoof] = useState(true)
 
   if (import.meta.hot) {
     import.meta.hot.accept('./Models/SimpleHouse.json', (mod) => {
@@ -71,8 +76,33 @@ export default function App() {
           />
           Show Windows
         </label>
-
-
+        <label style={{ display: 'block', marginBottom: '8px' }}>
+          <input
+            type="checkbox"
+            checked={showPlumbings}
+            onChange={e => setShowPlumbings(e.target.checked)}
+            style={{ marginRight: '8px' }}
+          />
+          Show Plumbings
+        </label>
+        <label style={{ display: 'block', marginBottom: '8px' }}>
+          <input
+            type="checkbox"
+            checked={showElectrical}
+            onChange={e => setShowElectrical(e.target.checked)}
+            style={{ marginRight: '8px' }}
+          />
+          Show Electrical
+        </label>
+        <label style={{ display: 'block', marginBottom: '8px' }}>
+          <input
+            type="checkbox"
+            checked={showRoof}
+            onChange={e => setShowRoof(e.target.checked)}
+            style={{ marginRight: '8px' }}
+          />
+          Show Roof
+        </label>
       </div>
       <div className="viewer">
         <Canvas shadows camera={{ position: [5, 5, 5], fov: 50 }}>
@@ -100,7 +130,21 @@ export default function App() {
             windows={data?.layers?.windows}
             defaults={data?.defaults}
           />
-
+          <PlumbingsGroup
+            showPlumbings={showPlumbings}
+            plumbings={data?.layers?.plumbing}
+            defaults={data?.defaults}
+          />
+          <ElectricalRunsGroup
+            showElectrical={showElectrical}
+            electricalRuns={data?.layers?.electrical}
+            defaults={data?.defaults}
+          />
+          <RoofsGroup
+            showRoof={showRoof}
+            roofs={data?.layers?.roof}
+            defaults={data?.defaults}
+          />
           {showStats && <Stats position="bottom-left" />}
         </Canvas>
       </div>
