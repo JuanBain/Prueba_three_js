@@ -7,4 +7,5 @@ export const LAYERS_UI = [
     { key: 'plumbing', label: 'Plumbing' },
     { key: 'electrical', label: 'Electrical' },
     { key: 'roof', label: 'Roof' },
+    { key: 'concreteSlabs', label: 'Concrete Slabs' }
 ]

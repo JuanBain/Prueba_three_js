@@ -10,6 +10,7 @@ import PlumbingsGroup from './Scene/PlumbingsGroup'
 import ElectricalRunsGroup from './Scene/ElectricalRunsGroup'
 import RoofsGroup from './Scene/RoofsGroup'
 import Sidebar from './Components/Sidebar'
+import ConcreteSlabsGroup from './Scene/ConcreteSlabsGroup'
 
 const initialLayers = {
   walls: { show: true, opacity: 1 },
@@ -19,6 +20,7 @@ const initialLayers = {
   plumbing: { show: true, opacity: 1 },
   electrical: { show: true, opacity: 1 },
   roof: { show: true, opacity: 1 },
+  concreteSlabs: { show: true, opacity: 1 },
 }
 
 function layersReducer(state, action) {
@@ -130,7 +132,13 @@ export default function App() {
             opacity={layers.roof.opacity}
             color={data?.defaults?.colors?.roof}
           />
-
+          <ConcreteSlabsGroup
+            showConcreteSlabs={layers.concreteSlabs.show}
+            slabs={data?.layers?.concreteSlabs}
+            defaults={data?.defaults}
+            opacity={layers.concreteSlabs.opacity}
+            color={data?.defaults?.colors?.concreteSlabs}
+          />
           {showStats && <Stats />}
         </Canvas>
       </div>
