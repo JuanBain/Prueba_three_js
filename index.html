@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casa 3D</title>
-    <style>
-      html, body, #root { margin: 0; height: 100%; }
-      body { font-family: sans-serif; }
-      .app { display: flex; height: 100%; }
-      .sidebar { width: 280px; padding: 12px; border-right: 1px solid #ddd; overflow:auto;}
-      .viewer { flex: 1; }
-      button { margin: 4px; padding: 6px 10px; }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D House</title>
+  <style>
+    html,
+    body,
+    #root {
+      margin: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .app {
+      display: flex;
+      height: 100%;
+    }
+
+    .sidebar {
+      width: 280px;
+      padding: 12px;
+      border-right: 1px solid #ddd;
+      overflow: auto;
+    }
+
+    .viewer {
+      flex: 1;
+    }
+
+    button {
+      margin: 4px;
+      padding: 6px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
